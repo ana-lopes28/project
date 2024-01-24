@@ -85,9 +85,7 @@ body * {
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
-
+    animation: slide-in 0.4s;
 }
 
 
@@ -160,4 +158,25 @@ footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+/*media queries*/
+@media (min-width: 700px) {
+:root {
+    --bg-url: url(./assests/bg-desktop.jpg);
+}
+
+    .light {
+        --bg-url: url(.assests/bg-desktop-light.jpg);
+    }
+}
+
+/* animation */
+@keyframes slide-in {
+from {
+    left: 0;
+}
+to {
+    left: 50%;
+}
 }
